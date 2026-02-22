@@ -5,7 +5,7 @@ from gui_utilities import EdgeDetector
 
 
 def main():
-    file = "GUI-Helper-Tool/yellow.jpg"
+    file = "yellow.jpg"
     img = cv2.imread(file, 0)         # read the photo whose name is in the args box.
 
     if img is None:
