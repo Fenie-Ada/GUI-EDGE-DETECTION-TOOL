@@ -6,15 +6,15 @@ from gui_utilities import EdgeDetector
 
 def main():
     file = "yellow.jpg"
-    img = cv2.imread(file, 0)         # read the photo whose name is in the args box.
+    image = cv2.imread(file, 0)         # read the photo whose name is in the args box.
 
-    if img is None:
+    if image is None:
         print("Cannot find the picture: ", file)
         return
     
-    cv2.imshow('Input', img)
+    cv2.imshow('Input', image)
 
-    edge_detector = EdgeDetector(img, filter_size=13, threshold1=28, threshold2=115)     # (image, start with three numbers on its sliders)
+    edge_detector = EdgeDetector(image, filter_size=13, threshold1=28, threshold2=115)     # (image, start with three numbers on its sliders)
 
     print ("Edge parameters:")                          # After the slider window is closed (you pressed any key), write on the black screen:
     print (f"GaussianBlur Filter Size: {edge_detector.filterSize()}")        # then the three numbers you chose with the sliders
